@@ -971,3 +971,7 @@ openPage = function(pageId){
     setTimeout(initScrollReveal, 300);
   }
 };
+function goToReservation(){
+  openPage('reservation');
+  window.scrollTo(0,0);
+}
