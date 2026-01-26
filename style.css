@@ -4233,3 +4233,23 @@ span,
 .premium-call{
   text-decoration:none !important;
 }
+/* ================= MOBILE : ORDER NOW TEXT CENTER + STACK ================= */
+@media (max-width: 768px){
+
+  .zomato-btn{
+    display:flex;
+    flex-direction:column;          /* 🔥 Order & Now vertical */
+    align-items:center;             /* 🔥 horizontal center */
+    justify-content:center;         /* 🔥 vertical center */
+    line-height:1.1;
+    text-align:center;
+    padding:10px 18px;              /* balanced spacing */
+  }
+
+  .zomato-btn span{
+    display:block;                  /* 🔥 line break force */
+    width:100%;
+    text-align:center;
+  }
+}
+
