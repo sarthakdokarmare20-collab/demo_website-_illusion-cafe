@@ -74,41 +74,33 @@
   <div class="home-hero">
 
     <!-- LEFT CONTENT -->
-    <div class="home-hero-text">
+    <div class="hero-tagline-box">
 
-      <h1 class="hero-line">
-        Where Every Sip Feels Like <br>
-        <span>An Illusion of Perfection</span>
-      </h1>
+  <h1 class="hero-tagline-main hero-line">
+    An Illusion of Perfection
+  </h1>
 
-      <p class="hero-tagline hero-line">
-        The Progressive Kitchen & Bistro
-      </p>
+  <p class="hero-tagline-sub hero-line">
+    The Progressive Kitchen & Bistro
+  </p>
 
-      <p class="hero-line">
-        Step into a thoughtfully designed café experience where
-        handcrafted beverages, elegant interiors and comforting
-        flavours come together to create moments worth remembering.
-      </p>
+  <div class="home-hero-actions hero-line">
+    <button class="home-btn-primary" onclick="openPage('menu')">
+      Explore Menu
+    </button>
 
-      <div class="home-hero-actions hero-line">
-        <button class="home-btn-primary" onclick="openPage('menu')">
-          Explore Menu
-        </button>
+    <button class="home-btn-outline" onclick="openPage('franchise')">
+      Franchise With Us
+    </button>
+  </div>
 
-        <button class="home-btn-outline" onclick="openPage('franchise')">
-          Franchise With Us
-        </button>
-      </div>
+</div>
+
 
     </div>
 
     <!-- RIGHT IMAGE -->
-    <div class="home-hero-image">
-      <div class="hero-img-frame">
-        <img src="frontimage.webp" alt="Illusion Café Interior">
-      </div>
-    </div>
+    
 
   </div>
 
@@ -173,6 +165,17 @@
   </div>
 
 </div>
+<!-- MOBILE FULLSCREEN HERO -->
+<section class="mobile-hero">
+  <img src="chairview.jpg" alt="Cafe Illusions">
+
+  <!-- overlay content -->
+  <div class="mobile-hero-overlay">
+    <button class="book-table-btn" onclick="openPage('reservation')">
+      Book Your Table
+    </button>
+  </div>
+</section>
 
 <!-- ===== HOME GALLERY PREVIEW ===== -->
 <div class="home-gallery-preview reveal">
