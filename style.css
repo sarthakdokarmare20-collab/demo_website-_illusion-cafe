@@ -4252,4 +4252,305 @@ span,
     text-align:center;
   }
 }
+/* ================================
+   HOME HERO – FULL BACKGROUND IMAGE
+================================ */
 
+.home-hero{
+  height:calc(100vh - 70px);
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("frontimage.webp");
+    
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  align-items:center;
+  padding:0 80px;
+}
+
+/* TEXT ABOVE IMAGE */
+.home-hero-text{
+  max-width:680px;
+  color:#fff;
+  z-index:2;
+}
+
+/* HERO TITLE */
+.home-hero-text h1{
+  color:#ffffff;
+}
+
+/* TAGLINE + PARAGRAPH */
+.home-hero-text p,
+.hero-tagline{
+  color:rgba(255,255,255,0.9);
+}
+
+/* BUTTONS ON IMAGE */
+.home-btn-primary{
+  background:#7a0f1f;
+}
+
+.home-btn-outline{
+  color:#fff;
+  border-color:#fff;
+}
+
+.home-btn-outline:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  .home-hero{
+    padding:40px 20px;
+    text-align:center;
+  }
+
+  .home-hero-text{
+    margin:auto;
+  }
+}
+/* ===============================
+   HERO TAGLINE – PREMIUM FINAL
+=============================== */
+
+.hero-tagline-box{
+  position:absolute;
+  left:6%;              /* 🔥 aur left */
+  bottom:10%;           /* 🔥 left-bottom */
+  max-width:560px;
+}
+
+
+.hero-tagline-main{
+  font-family:'Playfair Display', serif;
+  font-size:44px;
+  font-weight:600;
+  color:#ffffff;
+  letter-spacing:0.6px;
+  line-height:1.2;
+  margin:0;                   /* 🔥 NO bottom gap */
+  text-shadow:0 8px 28px rgba(0,0,0,0.55);
+}
+
+.hero-tagline-sub{
+  font-family:'Playfair Display', serif;
+  font-size:17px;
+  font-style:italic;
+  letter-spacing:1.2px;
+  color:rgba(255,255,255,0.82);
+  margin:4px 0 0;              /* 🔥 sirf 4px gap */
+}
+
+/* SUBTLE DIVIDER FEEL (OPTIONAL LUXURY TOUCH) */
+.hero-tagline-sub::before{
+  content:"— ";
+  opacity:0.6;
+}
+
+.hero-tagline-sub::after{
+  content:" —";
+  opacity:0.6;
+}
+
+/* MOBILE TUNING */
+@media(max-width:768px){
+  .hero-tagline-box{
+    margin-top:90px;
+  }
+
+  .hero-tagline-main{
+    font-size:30px;
+  }
+
+  .hero-tagline-sub{
+    font-size:14px;
+  }
+}
+.hero-tagline-sub::before,
+.hero-tagline-sub::after{
+  opacity:0.55;
+}
+@media(max-width:768px){
+  .hero-tagline-box{
+    left:50%;
+    bottom:14%;
+    transform:translateX(-50%);
+    text-align:center;
+  }
+
+  .hero-tagline-main{
+    font-size:30px;
+  }
+
+  .hero-tagline-sub{
+    font-size:14px;
+  }
+}
+/* ===============================
+   HERO BUTTON POSITION – DESKTOP
+=============================== */
+
+@media (min-width: 769px){
+
+  .home-hero-actions{
+    margin-top:14px;          /* 🔥 tagline ke bilkul niche */
+    display:flex;
+    gap:16px;
+  }
+}
+/* ===============================
+   HERO BUTTONS – MOBILE HIDE
+=============================== */
+
+@media (max-width: 768px){
+
+  .home-hero-actions{
+    display:none !important;   /* 🔥 phone me gayab */
+  }
+}
+.hero-tagline-box{
+  position:absolute;
+  left:6%;
+  bottom:10%;
+  max-width:560px;
+}
+
+.home-hero-actions{
+  margin-top:14px;     /* 👈 gap control */
+  display:flex;
+  gap:16px;
+}
+@media (max-width:768px){
+  .home-hero-actions{
+    display:none !important;
+  }
+}
+/* ===============================
+   MOBILE HERO TEXT – CENTER + PREMIUM
+=============================== */
+
+@media (max-width: 768px){
+
+  /* tagline box center */
+  .hero-tagline-box{
+    left:50% !important;
+    bottom:16% !important;
+    transform:translateX(-50%);
+    text-align:center;
+    max-width:90%;
+  }
+
+  /* MAIN HEADING */
+  .hero-tagline-main{
+    font-size:28px !important;     /* 🔥 chota but bold */
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:rgba(255,255,255,0.92);  /* 🔥 premium white */
+    text-shadow:0 6px 22px rgba(0,0,0,0.55);
+  }
+
+  /* SUB TAGLINE */
+  .hero-tagline-sub{
+    font-size:14px !important;
+    margin-top:6px;
+    letter-spacing:1px;
+    color:rgba(255,255,255,0.72);  /* 🔥 thoda transparent */
+    font-style:italic;
+  }
+
+  /* remove extra dashes if heavy lag rahe ho */
+  .hero-tagline-sub::before,
+  .hero-tagline-sub::after{
+    opacity:0.4;
+  }
+}
+/* ===============================
+   MOBILE FULLSCREEN IMAGE HERO
+=============================== */
+
+.mobile-hero{
+  display:none;
+}
+
+@media (max-width:768px){
+
+  .mobile-hero{
+    display:block;
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+  }
+
+  .mobile-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* DARK OVERLAY */
+  .mobile-hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.55)
+      );
+    z-index:1;
+  }
+
+  /* CENTER / BOTTOM CONTENT */
+  .mobile-hero-overlay{
+    position:absolute;
+    left:50%;
+    bottom:12%;
+    transform:translateX(-50%);
+    z-index:2;
+  }
+
+  /* ===============================
+     BOOK YOUR TABLE – GLASS BUTTON
+  =============================== */
+
+  .book-table-btn{
+    padding:16px 42px;
+    border-radius:50px;
+
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.35);
+    color:#ffffff;
+
+    font-family:'Poppins', sans-serif;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:1.2px;
+
+    cursor:pointer;
+
+    box-shadow:
+      0 18px 40px rgba(0,0,0,0.45),
+      inset 0 0 0 rgba(255,255,255,0.25);
+
+    transition:all .35s cubic-bezier(.22,.61,.36,1);
+  }
+
+  .book-table-btn:hover{
+    transform:translateY(-4px) scale(1.05);
+    background:rgba(255,255,255,0.28);
+  }
+}
