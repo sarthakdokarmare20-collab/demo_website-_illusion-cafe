@@ -975,3 +975,26 @@ function goToReservation(){
   openPage('reservation');
   window.scrollTo(0,0);
 }
+/* ================= PREMIUM MOBILE REVIEW SLIDER ================= */
+if(window.innerWidth <= 900){
+
+  const reviews = document.querySelectorAll(".review-card");
+  let current = 0;
+
+  if(reviews.length){
+
+    reviews[0].classList.add("active");
+
+    setInterval(()=>{
+
+      reviews[current].classList.remove("active");
+
+      current = (current + 1) % reviews.length;
+
+      setTimeout(()=>{
+        reviews[current].classList.add("active");
+      }, 200);
+
+    }, 3200); // slow = premium
+  }
+}
