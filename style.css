@@ -4930,3 +4930,13 @@ html, body {
   border-bottom: none !important;
   text-decoration: none !important;
 }
+/* HIDE EXTRA HERO BUTTONS ON DESKTOP ONLY */
+@media (min-width: 901px) {
+  .mobile-hero-actions,
+  .mobile-only,
+  .mobile-hero-actions button,
+  .mobile-hero-actions a {
+    display: none !important;
+  }
+}
+
