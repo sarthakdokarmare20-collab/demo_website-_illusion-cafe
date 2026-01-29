@@ -4728,3 +4728,205 @@ img {
   right: 16px;
   max-width: calc(100vw - 32px);
 }
+.page {
+  display: none;
+  width: 100%;
+}
+
+.page.active {
+  display: block;
+}
+.reservation-section {
+  min-height: 100vh;
+  padding: 120px 16px 60px; /* header ke niche space */
+  box-sizing: border-box;
+}
+.reservation-box {
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+
+  .reservation-section {
+    padding-top: 140px; /* fixed header offset */
+  }
+
+  .reservation-box {
+    box-shadow: none;
+  }
+}
+@media (max-width: 768px) {
+
+  .home-hero-content {
+    transform: translateY(-40px); /* text upar */
+    text-align: center;
+  }
+
+  .home-hero-content h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .home-hero-content p {
+    font-size: 14px;
+    opacity: 0.9;
+  }
+}
+.hero-quick-actions {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .hero-quick-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .hero-quick-actions button {
+    padding: 8px 18px;
+    font-size: 13px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  .hero-quick-actions button:active {
+    transform: scale(0.96);
+  }
+}
+/* ===============================
+   REMOVE UNDERLINE FROM CTA BUTTON
+================================ */
+
+.cta-about-btn,
+.cta-about-btn:hover,
+.cta-about-btn:focus,
+.cta-about-btn:active {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+/* ==============================
+   GLOBAL BACKGROUND IMAGE
+============================== */
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("bg.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+}
+/* ================================
+   MOBILE – LAST IMAGE PERFECT FIX
+================================ */
+@media (max-width: 768px){
+
+  /* parent padding hatao */
+  .home-contact-preview{
+    padding: 0 !important;
+    background: transparent;
+  }
+
+  /* wrapper full width, no border */
+  .contact-preview-image{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  /* image exact requirement */
+  .contact-preview-image img{
+    width: 100vw;        /* left-right no gap */
+    height: 50vh;        /* 🔥 requested height */
+    object-fit: cover;
+    border-radius: 0;    /* skin border gone */
+    display: block;
+  }
+}
+/* =====================================
+   MOBILE HERO BUTTONS (ONLY PHONE)
+===================================== */
+@media (max-width: 768px){
+
+  .mobile-hero-actions{
+    position: relative;
+    margin-top: -43px;          /* image se thoda overlap */
+    padding: 20px 16px 10px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .mobile-hero-btn{
+    flex: 1;
+    height: 48px;
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    cursor: pointer;
+    transition: all .3s ease;
+    backdrop-filter: blur(8px);
+  }
+
+  /* PRIMARY – solid maroon */
+  .mobile-hero-btn.primary{
+    background: linear-gradient(135deg,#8b0e1a,#a41626);
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 26px rgba(139,14,26,.35);
+  }
+
+  .mobile-hero-btn.primary:active{
+    transform: scale(.96);
+  }
+
+  /* OUTLINE – premium glass */
+  .mobile-hero-btn.outline{
+    background: rgba(255,255,255,.45);
+    color: #8b0e1a;
+    border: 1.6px solid rgba(139,14,26,.6);
+  }
+
+  .mobile-hero-btn.outline:active{
+    transform: scale(.96);
+  }
+}
+/* REMOVE LINE UNDER SOCIAL ICONS (PC + MOBILE) */
+.footer-social::after,
+.footer-social hr,
+.footer-social span::after,
+.footer-social a::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* extra safety */
+.footer-social {
+  border: none !important;
+}
+.footer-social a {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
